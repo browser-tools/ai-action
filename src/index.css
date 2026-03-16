@@ -1,0 +1,66 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 171 60% 96%;
+    --foreground: 176 65% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 176 65% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 176 65% 13%;
+
+    --primary: 176 65% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 171 60% 96%;
+    --secondary-foreground: 176 65% 29%;
+
+    --muted: 176 10% 90%;
+    --muted-foreground: 176 30% 40%;
+
+    --accent: 346 87% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 176 20% 80%;
+    --input: 176 20% 80%;
+    --ring: 176 65% 29%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .hero-pattern {
+    background-color: hsl(var(--background));
+    background-image: radial-gradient(rgba(26, 123, 107, 0.05) 2px, transparent 2px);
+    background-size: 30px 30px;
+  }
+  
+  .heading-outline {
+    text-shadow: 
+      -1px -1px 0 hsl(var(--primary)),
+      1px -1px 0 hsl(var(--primary)),
+      -1px 1px 0 hsl(var(--primary)),
+      1px 1px 0 hsl(var(--primary));
+  }
+}
