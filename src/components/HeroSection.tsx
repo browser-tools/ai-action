@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import Logo from './Logo';
 import { MousePointer, ArrowRight } from 'lucide-react';
 import { EXTENSION_WEBSTORE_URL } from '@/config';
+import screenshotForLanding from '@/assets/screenshot-for-landing.png';
 
 const HeroSection: React.FC = () => {
   return (
@@ -45,7 +46,7 @@ const HeroSection: React.FC = () => {
         </div>
 
         <div className="flex" >
-          <img src="/screenshot-for-landing.png" alt="AI Action Screenshot" />
+          <img src={screenshotForLanding} alt="AI Action Screenshot" />
         </div>
 
       </div>
